@@ -7,9 +7,8 @@ Welcome to my personal website! This site is a collection of my work, achievemen
 My name is **Aomsin Nimsombun**, and I am an **Integrated Engineering student at the University of British Columbia (UBC)** majoring in **Mechatronics** 🤖. I have a strong interest in technology, engineering, and how these fields intersect with real-world applications. I'm particularly excited about working with **AI**, **robotics**, and creating innovative solutions to complex problems.
 
 ### My Interests 🎯:
-- **History** 📚 (especially military history)
-- **Golf & Skiing** ⛷️🏌️‍♂️
-- **Economics** 💰
+- **Swimming, Basketball, Golf & Skiing** ⛷️🏌️‍♂️
+- **Economics History** 💰
 - **Thai Politics & Military History** 🇹🇭
 
 In addition to my academic work, I have been involved in various leadership roles, including being a representative for **Vantage One Engineering students** 🏛️ and the **Director of External Affairs** for **UBC Thai Aiyara** 🐘.
