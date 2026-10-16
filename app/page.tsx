@@ -24,7 +24,6 @@ const projects = [
 const leadership = [
   {
     organization: "UBC Association of Southeast Asian Clubs",
-    shortName: "ASEAC",
     role: "Chair, Advisory Board · Former President",
   },
   {
@@ -102,32 +101,28 @@ export default function Home() {
           </ol>
         </section>
 
-        <section aria-labelledby="projects-heading">
+        <section aria-labelledby="leadership-heading">
           <SectionHeading number="03">
+            <span id="leadership-heading">leadership & community</span>
+          </SectionHeading>
+          <ul className="menu-list leadership-list">
+            {leadership.map((item) => (
+              <li key={item.organization} className="menu-row leadership-row">
+                <span className="row-name">{item.organization}</span>
+                <span className="row-detail">{item.role}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+          <SectionHeading number="04">
             <span id="projects-heading">selected work</span>
           </SectionHeading>
           <ul className="menu-list">
             {projects.map((project) => (
               <li key={project} className="menu-row project-row">
                 <span className="row-name">{project}</span>
-                <span className="row-mark" aria-hidden="true">◆</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section aria-labelledby="leadership-heading">
-          <SectionHeading number="04">
-            <span id="leadership-heading">leadership & community</span>
-          </SectionHeading>
-          <ul className="menu-list leadership-list">
-            {leadership.map((item) => (
-              <li key={item.organization} className="menu-row leadership-row">
-                <span className="row-name">
-                  {item.organization}
-                  {item.shortName ? <small>{item.shortName}</small> : null}
-                </span>
-                <span className="row-detail">{item.role}</span>
               </li>
             ))}
           </ul>
