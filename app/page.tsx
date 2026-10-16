@@ -12,7 +12,7 @@ const experience = [
   {
     year: "2024",
     organization: "JLL",
-    role: "Engineering",
+    role: "Summer Engineering Intern",
   },
 ];
 
@@ -59,15 +59,18 @@ export default function Home() {
           <p className="eyebrow">Engineering + business, and everything between</p>
           <p className="discipline">engineering · technology · strategy</p>
 
-          <nav className="primary-links" aria-label="Primary links">
-            <a href="/Jirat_Nimsombun_CV.pdf">résumé</a>
-            <a href="https://www.linkedin.com/in/jirat-nimsombun">linkedin</a>
-            <a href="https://github.com/aomsin832">github</a>
-          </nav>
         </div>
       </header>
 
       <div className="menu-content">
+        <nav className="primary-links" aria-label="Primary links">
+          <a href="/Jirat_Nimsombun_CV.pdf">résumé</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.linkedin.com/in/jirat-nimsombun">linkedin</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/aomsin832">github</a>
+        </nav>
+
         <section aria-labelledby="education-heading">
           <SectionHeading number="01">
             <span id="education-heading">education</span>
@@ -129,18 +132,13 @@ export default function Home() {
           </ul>
         </section>
 
-        <footer className="contact" aria-labelledby="contact-heading">
-          <SectionHeading number="05">
-            <span id="contact-heading">contact</span>
-          </SectionHeading>
-          <div className="email-list">
-            <a href="mailto:jiratnim@gmail.com">jiratnim@gmail.com</a>
-            <a href="mailto:jiratnim@student.ubc.ca">jiratnim@student.ubc.ca</a>
-          </div>
-          <p className="footer-note">Integrated Engineering + Commerce at UBC</p>
+        <footer className="site-footer">
           <div className="footer-meta">
             <span>© 2026 Jirat Nimsombun</span>
-            <span>Vancouver · Bangkok</span>
+            <span className="footer-separator" aria-hidden="true">·</span>
+            <a href="mailto:jiratnim@gmail.com">jiratnim [at] gmail</a>
+            <span className="footer-separator" aria-hidden="true">/</span>
+            <a href="mailto:jiratnim@student.ubc.ca">student.ubc.ca</a>
           </div>
         </footer>
       </div>
