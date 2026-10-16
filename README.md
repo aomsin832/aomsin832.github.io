@@ -1,26 +1,78 @@
-# Aomsin Nimsombun's Personal Website 🌐
+# Jirat Nimsombun — Personal Website
 
-Welcome to my personal website! This site is a collection of my work, achievements, and interests. Feel free to explore and learn more about me, my projects, and what I am passionate about.
+A minimal, single-column personal website for Jirat Nimsombun (`jarett / aomsin / aom`). It presents education, selected experience, engineering projects, leadership, a résumé, and direct contact links.
 
-## About Me 👨‍💻
+## Stack
 
-My name is **Aomsin Nimsombun**, and I am an **Integrated Engineering student at the University of British Columbia (UBC)** majoring in **Mechatronics** 🤖. I have a strong interest in technology, engineering, and how these fields intersect with real-world applications. I'm particularly excited about working with **AI**, **robotics**, and creating innovative solutions to complex problems.
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Static export for GitHub Pages
 
-## How to Navigate the Website 🧭
+## Local development
 
-- **Home**: Overview of my interests, projects, and contact information 📑.
-- **Projects**: Details of the work I have done, including my involvement with UBC Thunderbots and my internship at JLL 🔧.
-- **Resume**: Download a PDF version of my resume 📄.
-- **Contact**: Reach out to me through my **LinkedIn**, **GitHub**, or the **Contact** page 📬.
+This repository is already cloned at:
 
-## Contact Me 📬
+```text
+/Users/aomnim/Documents/ChatGPT/personal-website
+```
 
-Feel free to get in touch with me through my **LinkedIn** 🌐, **GitHub** 🖥️, or via the **Contact** page on this website. I am always open to new collaborations and connections! 🤝
+Open that same folder in Codex Desktop or VS Code. Both applications will work with the same files and Git branches.
 
-## License 📜
+Install dependencies and start the local site:
 
-This website is built for educational and personal purposes. Feel free to explore, but please do not reproduce the content for commercial purposes without permission.
+```bash
+pnpm install
+pnpm dev
+```
 
----
+Then open [http://localhost:3000](http://localhost:3000).
 
-Thank you for visiting my personal website! I hope you find it interesting and informative ✨.
+## Quality checks
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm build
+```
+
+`pnpm build` produces the deployable static site in `out/`.
+
+## Branches
+
+- `main` — current production website
+- `codex/archive-original-site-2026-10-15` — preserved original website
+- `codex/site-redesign` — new Next.js redesign
+
+The original site remains recoverable from the archive branch after the redesign is deployed to `main`.
+
+## GitHub Pages deployment
+
+The workflow in `.github/workflows/deploy-pages.yml` is configured to:
+
+1. Install the locked pnpm dependencies.
+2. Run lint, type checking, and the production build.
+3. Upload the `out/` static export.
+4. Deploy it to GitHub Pages.
+
+It deploys only from `main` or when manually started. Pushing the redesign branch does not replace the live site.
+
+Before the first Next.js deployment, open **Repository Settings → Pages** and set the publishing source to **GitHub Actions**. Merge into `main` only after final approval.
+
+## Connecting `jiratnim.com` later
+
+Do not configure the domain until it has been purchased and is under your control.
+
+When ready:
+
+1. Verify `jiratnim.com` in your GitHub account’s Pages settings.
+2. In this repository, open **Settings → Pages → Custom domain** and enter `jiratnim.com`.
+3. At the domain registrar, add GitHub Pages’ current apex-domain DNS records.
+4. Add a `www` CNAME record pointing to `aomsin832.github.io`.
+5. Wait for GitHub’s DNS check, then enable **Enforce HTTPS**.
+
+Because this site deploys through GitHub Actions, a tracked `CNAME` file is not required. Always follow the current [GitHub Pages custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) when connecting the domain.
+
+## Content updates
+
+The homepage content lives in `app/page.tsx`. Global typography, colors, spacing, and responsive behavior live in `app/globals.css`. Replace `public/Jirat_Nimsombun_CV.pdf` whenever the public résumé changes, keeping the filename stable so the site link continues to work.
