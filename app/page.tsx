@@ -56,8 +56,9 @@ export default function Home() {
           <p className="aliases" aria-label="Also known as Jarett, Aomsin, and Aom">
             <span aria-hidden="true">jarett / aomsin / aom</span>
           </p>
-          <p className="eyebrow">Engineering + business, and everything between</p>
-          <p className="discipline">engineering · technology · strategy</p>
+          <p className="eyebrow">
+            Engineering, technology, business &amp; strategy — and everything between.
+          </p>
 
         </div>
       </header>
@@ -103,7 +104,7 @@ export default function Home() {
 
         <section aria-labelledby="projects-heading">
           <SectionHeading number="03">
-            <span id="projects-heading">selected projects</span>
+            <span id="projects-heading">selected work</span>
           </SectionHeading>
           <ul className="menu-list">
             {projects.map((project) => (
