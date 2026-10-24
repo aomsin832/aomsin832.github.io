@@ -1,5 +1,10 @@
 const experience = [
   {
+    year: "Winter 2027",
+    organization: "KPMG · Calgary",
+    role: "Incoming — Management Consulting, Technology Strategy & Transformation",
+  },
+  {
     year: "2026",
     organization: "Deloitte",
     role: "Cyber Strategy & Transformation",
