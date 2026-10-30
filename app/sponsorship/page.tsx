@@ -3,6 +3,34 @@ import Link from "next/link";
 import SponsorExperience from "./SponsorExperience";
 import styles from "./sponsorship.module.css";
 
+const packages = [
+  {
+    name: "Supporter",
+    price: "$150 CAD",
+    placement: "One upper-arm placement",
+    includes: ["Logo on this page", "Race-week story mention", "Post-race proof photo"],
+  },
+  {
+    name: "Race partner",
+    price: "$350 CAD",
+    placement: "Chest or thigh placement",
+    includes: ["Everything in Supporter", "Training-period feature", "Tagged race recap + selected images"],
+  },
+  {
+    name: "Title partner",
+    price: "$750 CAD",
+    placement: "Largest approved placement",
+    includes: ["Category exclusivity", "Two training mentions", "Race-week feature + 30-day image usage"],
+  },
+];
+
+const process = [
+  ["Choose", "Select a placement and send a transparent PNG or SVG logo."],
+  ["Confirm", "We approve the category, sign a one-page agreement, and reserve the spot with 50%."],
+  ["Test", "A skin-safe temporary tattoo is printed and tested before race week."],
+  ["Deliver", "Race-day proof and the agreed recap are sent within 72 hours after the event."],
+];
+
 export const metadata: Metadata = {
   title: "Vancouver Mixed Doubles Sponsorship · Jirat Nimsombun",
   description:
@@ -66,8 +94,62 @@ export default function SponsorshipPage() {
           </ul>
         </div>
         <p className={styles.finePrint}>
-          *Physical placements are subject to event and division approval. This is an independent
-          athlete partnership and is not affiliated with or endorsed by HYROX.
+          *Physical placements and dimensions are subject to written event and division approval.
+          If a tattoo placement is not approved, the sponsor may choose an agreed digital/apparel
+          alternative or a refund. This is an independent athlete partnership and is not affiliated
+          with or endorsed by HYROX.
+        </p>
+      </section>
+
+      <section className={styles.packages} aria-labelledby="packages-heading">
+        <div className={styles.sectionLabel}>
+          <span>02</span>
+          <h2 id="packages-heading">starting packages</h2>
+        </div>
+        <div className={styles.packageIntro}>
+          <h2>finite space. clear deliverables.</h2>
+          <p>
+            Launch pricing for local partners. Each package combines a proposed temporary-tattoo
+            placement with content before and after the race—so the value is larger than one logo.
+          </p>
+        </div>
+        <div className={styles.packageGrid}>
+          {packages.map((item, index) => (
+            <article className={styles.packageCard} key={item.name}>
+              <div className={styles.packageTopline}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{item.price}</span>
+              </div>
+              <h3>{item.name}</h3>
+              <p className={styles.packagePlacement}>{item.placement}</p>
+              <ul>
+                {item.includes.map((line) => <li key={line}>{line}</li>)}
+              </ul>
+              <a href={`mailto:jiratnim@gmail.com?subject=${encodeURIComponent(`${item.name} sponsorship · December 17 Vancouver`)}`}>
+                enquire <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.process} aria-labelledby="process-heading">
+        <div className={styles.sectionLabel}>
+          <span>03</span>
+          <h2 id="process-heading">how it works</h2>
+        </div>
+        <ol>
+          {process.map(([title, detail], index) => (
+            <li key={title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{title}</h3>
+              <p>{detail}</p>
+            </li>
+          ))}
+        </ol>
+        <p className={styles.caseStudy}>
+          Inspired by the finite-placement format used by Marc Lou for his 2026 HYROX campaign,
+          adapted here to realistic local-partner pricing and defined deliverables.
         </p>
       </section>
 
