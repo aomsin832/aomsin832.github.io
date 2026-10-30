@@ -40,6 +40,10 @@ const leadership = [
     organization: "UBC Thunderbots",
     role: "Sponsorship & Finance",
   },
+  {
+    organization: "Engineering First Year Council",
+    role: "2023",
+  },
 ];
 
 function SectionHeading({ number, children }: { number: string; children: React.ReactNode }) {
