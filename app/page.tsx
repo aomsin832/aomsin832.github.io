@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const experience = [
   {
     year: "Winter 2027",
@@ -74,6 +76,8 @@ export default function Home() {
 
       <div className="menu-content">
         <nav className="primary-links" aria-label="Primary links">
+          <Link href="/blog">notes</Link>
+          <span aria-hidden="true">·</span>
           <a href="/Jirat_Nimsombun_CV.pdf">résumé</a>
           <span aria-hidden="true">·</span>
           <a href="https://www.linkedin.com/in/jirat-nimsombun">linkedin</a>

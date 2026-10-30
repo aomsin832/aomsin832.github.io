@@ -8,9 +8,5 @@ export default defineConfig([
   globalIgnores([
     ".next/**",
     "out/**",
-    "assets/**",
-    "index.html",
-    "portfolio-details.html",
-    "text.txt",
   ]),
 ]);
