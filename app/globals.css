@@ -248,11 +248,39 @@ a:focus-visible {
   margin-top: clamp(2rem, 4vw, 3rem);
 }
 
+.campaign-link {
+  display: inline-block;
+  position: relative;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.95rem;
+}
+
+.campaign-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.2rem;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 260ms ease;
+}
+
+.campaign-link:hover::after,
+.campaign-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .footer-meta {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
   gap: 0.45rem 0.65rem;
+  margin-top: 1rem;
   color: var(--faint);
   font-size: 0.68rem;
   letter-spacing: 0.055em;

@@ -139,6 +139,9 @@ export default function Home() {
         </section>
 
         <footer className="site-footer">
+          <a className="campaign-link" href="/sponsorship">
+            HYROX Vancouver · December — support the campaign ↗
+          </a>
           <div className="footer-meta">
             <span>© 2026 Jirat Nimsombun</span>
             <span className="footer-separator" aria-hidden="true">·</span>
