@@ -33,8 +33,8 @@ const leadership = [
     role: "Chair, Advisory Board · Former President",
   },
   {
-    organization: "UBC Thai Aiyara",
-    role: "Chair, Advisory Board · Former Vice President",
+    organization: "UBC Thai Aiyara (Thai SA)",
+    role: "Senior Advisor",
   },
   {
     organization: "UBC Thunderbots",
