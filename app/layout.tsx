@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Jirat Nimsombun",
   description:
     "Jirat Nimsombun — engineering, technology, and strategy. Experience, selected projects, leadership, and contact links.",
-  metadataBase: new URL("https://aomsin832.github.io"),
+  metadataBase: new URL("https://jiratnim.com"),
   alternates: {
     canonical: "/",
   },

@@ -59,17 +59,17 @@ It deploys only from `main` or when manually started. Pushing the redesign branc
 
 Before the first Next.js deployment, open **Repository Settings → Pages** and set the publishing source to **GitHub Actions**. Merge into `main` only after final approval.
 
-## Connecting `jiratnim.com` later
+## Custom domain
 
-Do not configure the domain until it has been purchased and is under your control.
+The site is published at `https://jiratnim.com` through GitHub Pages. The
+deployment workflow keeps the GitHub Pages custom domain configured.
 
-When ready:
+DNS configuration:
 
-1. Verify `jiratnim.com` in your GitHub account’s Pages settings.
-2. In this repository, open **Settings → Pages → Custom domain** and enter `jiratnim.com`.
-3. At the domain registrar, add GitHub Pages’ current apex-domain DNS records.
-4. Add a `www` CNAME record pointing to `aomsin832.github.io`.
-5. Wait for GitHub’s DNS check, then enable **Enforce HTTPS**.
+1. The apex domain uses GitHub Pages' four `A` records.
+2. `www` uses a `CNAME` record pointing to `aomsin832.github.io`.
+3. GitHub Pages redirects `www.jiratnim.com` to the preferred apex domain.
+4. HTTPS is provided by GitHub Pages after DNS validation.
 
 Because this site deploys through GitHub Actions, a tracked `CNAME` file is not required. Always follow the current [GitHub Pages custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) when connecting the domain.
 
