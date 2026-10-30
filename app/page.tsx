@@ -23,6 +23,7 @@ const experience = [
 
 const projects = [
   "AI-Tracking Blimp",
+  "Amazon Robotics Hackathon · 4th Place",
   "Smart Modular Hydroponic Garden",
 ];
 
