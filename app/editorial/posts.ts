@@ -159,10 +159,7 @@ const postEntries: BlogPost[] = [
           {
             "segments": [
               {
-                "text": "UBC's "
-              },
-              {
-                "text": "International Scholars Program",
+                "text": "UBC's International Scholars Program",
                 "href": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars"
               },
               {
@@ -264,7 +261,11 @@ const postEntries: BlogPost[] = [
           },
           "For students in Arts or Science, an annual IMES of $20,000 could cover a substantial portion of their tuition, depending on the year and course load. For me, studying Engineering, the same amount covered roughly a third.",
           "And then there's Sauder.",
-          "From what I understand, some Sauder students may receive an additional renewable faculty-level scholarship alongside their university entrance awards. Sauder publishes a Bachelor of Commerce International Entrance Scholarship worth up to $20,000 per year, or potentially another $80,000 over four years. I've heard of situations where this effectively doubles an $80,000 scholarship package to $160,000, although I haven't confirmed that such matching is automatic.",
+          { segments: [
+            { text: "From what I understand, some Sauder students may receive an additional renewable faculty-level scholarship alongside their university entrance awards. Sauder publishes a " },
+            { text: "Bachelor of Commerce International Entrance Scholarship", href: "https://org-www.sauder.ubc.ca/programs/bachelors-degrees/bachelor-commerce/admissions-finance/fees-financing" },
+            { text: " worth up to $20,000 per year, or potentially another $80,000 over four years. I've heard of situations where this effectively doubles an $80,000 scholarship package to $160,000, although I haven't confirmed that such matching is automatic." },
+          ] },
           "Engineering, unfortunately, didn't have a comparable match for my award.",
           "So yes, while the scholarship is substantial, the actual percentage of tuition it covers can look very different depending on your program. And that's before even considering the cost of living in Vancouver.",
           "Again, I'm not complaining about receiving $100,000. I just think it's important for prospective students to understand what that amount means in practice."
