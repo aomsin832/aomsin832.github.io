@@ -19,7 +19,7 @@ function renderParagraph(paragraph: BlogParagraph, index: number) {
     <p key={index}>
       {paragraph.segments.map((segment, segmentIndex) => {
         if (segment.href) {
-          return <a key={segmentIndex} href={segment.href}>{segment.text}</a>;
+          return <a key={segmentIndex} href={segment.href}>{segment.emphasis === "strong" ? <strong>{segment.text}</strong> : segment.text}</a>;
         }
         if (segment.reveal) {
           return (
