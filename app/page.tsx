@@ -76,13 +76,13 @@ export default function Home() {
 
       <div className="menu-content">
         <nav className="primary-links" aria-label="Primary links">
-          <Link href="/editorial">editorial</Link>
-          <span aria-hidden="true">·</span>
           <a href="/Jirat_Nimsombun_CV.pdf">résumé</a>
           <span aria-hidden="true">·</span>
           <a href="https://www.linkedin.com/in/jirat-nimsombun">linkedin</a>
           <span aria-hidden="true">·</span>
           <a href="https://github.com/aomsin832">github</a>
+          <span aria-hidden="true">·</span>
+          <Link href="/editorial">editorial</Link>
         </nav>
 
         <section aria-labelledby="education-heading">
