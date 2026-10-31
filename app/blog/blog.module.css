@@ -248,6 +248,18 @@
   font-weight: 600;
 }
 
+.prose a {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.prose a:hover,
+.prose a:focus-visible {
+  color: var(--muted);
+}
+
 .initialsReveal {
   display: inline-block;
   position: relative;
