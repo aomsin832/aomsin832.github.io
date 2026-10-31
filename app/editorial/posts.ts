@@ -78,10 +78,22 @@ const postEntries: BlogPost[] = [
               },
               {
                 "text": "International Scholars Program",
-                "emphasis": "strong"
+                "emphasis": "strong",
+                "href": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars"
               },
               {
-                "text": ". My counsellor advised me not to seek a nomination or apply for it, and instead to take my chances with the university's merit-based entrance scholarships: the International Major Entrance Scholarship (IMES) and Outstanding International Student (OIS) Award."
+                "text": ". My counsellor advised me not to seek a nomination or apply for it, and instead to take my chances with the university's merit-based entrance scholarships: the "
+              },
+              {
+                "text": "International Major Entrance Scholarship (IMES)",
+                "href": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-entrance-scholarships/"
+              },
+              { "text": " and " },
+              {
+                "text": "Outstanding International Student (OIS) Award",
+                "href": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-entrance-scholarships/"
+              },
+              { "text": "."
               }
             ]
           },
@@ -98,7 +110,8 @@ const postEntries: BlogPost[] = [
               },
               {
                 "text": "International Major Entrance Scholarship (IMES)",
-                "emphasis": "strong"
+                "emphasis": "strong",
+                "href": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-entrance-scholarships/"
               },
               {
                 "text": " is a renewable, merit-based scholarship awarded to, in "
@@ -112,7 +125,8 @@ const postEntries: BlogPost[] = [
               },
               {
                 "text": "Outstanding International Student (OIS) Award",
-                "emphasis": "strong"
+                "emphasis": "strong",
+                "href": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-entrance-scholarships/"
               },
               {
                 "text": ", a one-time merit-based entrance scholarship."
