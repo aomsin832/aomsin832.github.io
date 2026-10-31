@@ -146,6 +146,9 @@ export default function Home() {
           <a className="campaign-link" href="/sponsorship">
             HYROX Vancouver · December — support the campaign ↗︎
           </a>
+          <div className="game-invitation"><a className="campaign-link" href="/games/salaf">
+            Since you’re here, enjoy a game of salaf ↗︎
+          </a></div>
           <div className="footer-meta">
             <span>© 2026 Jirat Nimsombun</span>
             <span className="footer-separator" aria-hidden="true">·</span>

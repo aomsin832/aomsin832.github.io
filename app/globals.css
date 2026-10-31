@@ -248,6 +248,10 @@ a:focus-visible {
   margin-top: clamp(2rem, 4vw, 3rem);
 }
 
+.game-invitation {
+  margin-top: 0.65rem;
+}
+
 .campaign-link {
   display: inline-block;
   position: relative;
