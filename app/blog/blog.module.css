@@ -244,6 +244,47 @@
   margin-top: 1.25rem;
 }
 
+.prose strong {
+  font-weight: 600;
+}
+
+.verse {
+  margin-top: 3rem !important;
+  font-style: italic;
+}
+
+.verse span {
+  display: block;
+}
+
+.postSignature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+
+.postSignature strong {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.postSignature em {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.disclaimer {
+  margin-top: 2rem !important;
+  color: var(--faint);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
 .inlineFigure {
   margin: 2.25rem 0 0;
 }

@@ -79,7 +79,7 @@ The homepage content lives in `app/page.tsx`. Global typography, colors, spacing
 
 ## Publishing a blog post
 
-Blog posts are defined in `app/blog/posts.ts`. The blog index sorts them by the
+Editorial posts are defined in `app/editorial/posts.ts`. The editorial index sorts them by the
 ISO `date` field automatically, with the newest post first.
 
 The simplest publishing workflow is to open this repository in Codex, attach
@@ -103,6 +103,6 @@ Include the following when available:
 - any links or sources that should appear in the article.
 
 For a manual update, add photos under `assets/blog/`, import them in
-`app/blog/posts.ts`, and add a new object to `postEntries`. A post can use a
+`app/editorial/posts.ts`, and add a new object to `postEntries`. A post can use a
 `coverImage`, and each section can use an optional `image`. Run `pnpm lint`,
 `pnpm typecheck`, and `pnpm build` before publishing.
