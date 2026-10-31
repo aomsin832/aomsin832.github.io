@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "../../blog/blog.module.css";
 import type { BlogParagraph } from "../posts";
-import { getPost, posts } from "../posts";
+import { allPosts, getPost } from "../posts";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -18,6 +18,22 @@ function renderParagraph(paragraph: BlogParagraph, index: number) {
   return (
     <p key={index}>
       {paragraph.segments.map((segment, segmentIndex) => {
+        if (segment.reveal) {
+          return (
+            <span
+              className={styles.initialsReveal}
+              key={segmentIndex}
+              tabIndex={0}
+              aria-label={`${segment.text}: ${segment.reveal}`}
+            >
+              {segment.text}
+              <span className={styles.initialsTooltip} aria-hidden="true">
+                {segment.reveal}
+              </span>
+            </span>
+          );
+        }
+
         if (segment.emphasis === "strong") {
           return <strong key={segmentIndex}>{segment.text}</strong>;
         }
@@ -33,7 +49,7 @@ function renderParagraph(paragraph: BlogParagraph, index: number) {
 }
 
 export function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+  return allPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
@@ -67,7 +83,7 @@ export default async function EditorialPostPage({ params }: PostPageProps) {
         <Link className={styles.wordmark} href="/editorial">
           Aomsin’s Editorial
         </Link>
-        <Link href="/editorial">All pieces ↗</Link>
+        <Link href="/editorial">All pieces ↗︎</Link>
       </nav>
 
       <article>

@@ -5,7 +5,8 @@ import { posts } from "./posts";
 
 export const metadata: Metadata = {
   title: "Aomsin’s Editorial — Jirat Nimsombun",
-  description: "Essays, observations, and occasional nonsense by Jirat Nimsombun.",
+  description:
+    "Engineering, technology, business, strategy, history, politics — and everything in between. Just me ranting.",
   alternates: {
     canonical: "/editorial/",
   },
@@ -18,7 +19,7 @@ export default function EditorialPage() {
         <Link className={styles.wordmark} href="/">
           jirat nimsombun
         </Link>
-        <Link href="/">Index ↗</Link>
+        <Link href="/">Index ↗︎</Link>
       </nav>
 
       <header className={styles.hero}>
@@ -27,7 +28,8 @@ export default function EditorialPage() {
           <h1>editorial</h1>
         </div>
         <p className={styles.heroCopy}>
-          Essays, observations, and occasional nonsense.
+          Engineering, technology, business, strategy, history, politics — and
+          everything in between. Just me ranting.
         </p>
       </header>
 

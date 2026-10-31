@@ -10,6 +10,7 @@ export type BlogImage = {
 export type BlogTextSegment = {
   text: string;
   emphasis?: "strong" | "italic";
+  reveal?: string;
 };
 
 export type BlogParagraph =
@@ -27,6 +28,7 @@ export type BlogPost = {
   readTime: string;
   category: string;
   intro: string;
+  listed?: boolean;
   coverImage?: BlogImage;
   sections: Array<{
     heading?: string;
@@ -43,7 +45,25 @@ export type BlogPost = {
 
 const postEntries: BlogPost[] = [
   {
-    slug: "the-priory-of-the-moong",
+    slug: "international-scholarships-at-ubc",
+    title: "International Scholarships at UBC",
+    excerpt:
+      "A forthcoming guide to IMES, OIS, and navigating UBC as an international student.",
+    date: "2026-10-30",
+    displayDate: "Coming soon",
+    readTime: "Preview",
+    category: "Scholarships",
+    intro: "A personal guide is on the way.",
+    sections: [
+      {
+        paragraphs: [
+          "I’m writing about my experience with UBC’s International Major Entrance Scholarship (IMES) and Outstanding International Student (OIS) Award — what they are, how the process felt, and what I wish I had known. The full piece is coming soon.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "moong",
     title: "The Priory of the มุ่ง",
     excerpt:
       "An affectionate satire about ambition, football, romance, and the latest fitness era.",
@@ -52,6 +72,7 @@ const postEntries: BlogPost[] = [
     readTime: "3 min read",
     category: "Satire",
     intro: "Oh Moong, Oh Moong.",
+    listed: false,
     sections: [
       {
         paragraphs: [
@@ -81,7 +102,18 @@ const postEntries: BlogPost[] = [
       {
         heading: "And then, there is love.",
         paragraphs: [
-          "Moong maintains a hit list longer than his employment history. An ambitious romantic portfolio, diversified across multiple prospects, with one recurring problem: zero executed transactions.",
+          {
+            segments: [
+              { text: "Moong maintains a " },
+              {
+                text: "hit list",
+                reveal: "E P F P A I P N S P",
+              },
+              {
+                text: " longer than his employment history. An ambitious romantic portfolio, diversified across multiple prospects, with one recurring problem: zero executed transactions.",
+              },
+            ],
+          },
           {
             segments: [
               { text: "At Sauder, they call this " },
@@ -138,10 +170,12 @@ const postEntries: BlogPost[] = [
 
 // ISO dates sort correctly as strings. Keep the newest post first everywhere
 // without requiring authors to place entries in a particular file order.
-export const posts = [...postEntries].sort((a, b) =>
+export const allPosts = [...postEntries].sort((a, b) =>
   b.date.localeCompare(a.date),
 );
 
+export const posts = allPosts.filter((post) => post.listed !== false);
+
 export function getPost(slug: string) {
-  return posts.find((post) => post.slug === slug);
+  return allPosts.find((post) => post.slug === slug);
 }
