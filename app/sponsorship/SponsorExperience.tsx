@@ -194,7 +194,7 @@ export default function SponsorExperience() {
         <a
           href={`mailto:jiratnim@gmail.com?subject=${encodeURIComponent(`${placement.name} sponsorship · December 17 Vancouver`)}`}
         >
-          ask about this placement <span aria-hidden="true">↗</span>
+          ask about this placement <span aria-hidden="true">↗︎</span>
         </a>
         <div className={styles.placementIndex} aria-label="Choose a placement">
           {(Object.keys(placements) as PlacementId[]).map((id, index) => (

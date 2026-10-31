@@ -126,7 +126,7 @@ export default function SponsorshipPage() {
                 {item.includes.map((line) => <li key={line}>{line}</li>)}
               </ul>
               <a href={`mailto:jiratnim@gmail.com?subject=${encodeURIComponent(`${item.name} sponsorship · December 17 Vancouver`)}`}>
-                enquire <span aria-hidden="true">↗</span>
+                enquire <span aria-hidden="true">↗︎</span>
               </a>
             </article>
           ))}
@@ -162,7 +162,7 @@ export default function SponsorshipPage() {
           className={styles.contactLink}
           href="mailto:jiratnim@gmail.com?subject=December%2017%20Vancouver%20sponsorship"
         >
-          start a conversation <span aria-hidden="true">↗</span>
+          start a conversation <span aria-hidden="true">↗︎</span>
         </a>
       </section>
 

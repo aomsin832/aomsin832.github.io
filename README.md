@@ -76,3 +76,33 @@ Because this site deploys through GitHub Actions, a tracked `CNAME` file is not 
 ## Content updates
 
 The homepage content lives in `app/page.tsx`. Global typography, colors, spacing, and responsive behavior live in `app/globals.css`. Replace `public/Jirat_Nimsombun_CV.pdf` whenever the public résumé changes, keeping the filename stable so the site link continues to work.
+
+## Publishing a blog post
+
+Blog posts are defined in `app/blog/posts.ts`. The blog index sorts them by the
+ISO `date` field automatically, with the newest post first.
+
+The simplest publishing workflow is to open this repository in Codex, attach
+the draft and any photos, and ask:
+
+```text
+Publish this as a new blog post.
+Title: How I received the IMES and OIS scholarships at UBC
+Category: Scholarships
+Date: 2026-10-30
+```
+
+Codex can edit the draft, add the post entry, provide descriptive image alt
+text and captions, run the quality checks, and publish it after your approval.
+Include the following when available:
+
+- title and draft text;
+- publication date and category;
+- a short excerpt, or permission to write one;
+- cover and inline photos with preferred captions;
+- any links or sources that should appear in the article.
+
+For a manual update, add photos under `assets/blog/`, import them in
+`app/blog/posts.ts`, and add a new object to `postEntries`. A post can use a
+`coverImage`, and each section can use an optional `image`. Run `pnpm lint`,
+`pnpm typecheck`, and `pnpm build` before publishing.

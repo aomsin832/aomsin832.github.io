@@ -25,7 +25,7 @@ export type BlogPost = {
   }>;
 };
 
-export const posts: BlogPost[] = [
+const postEntries: BlogPost[] = [
   {
     slug: "template",
     title: "A clean place for the next idea",
@@ -66,6 +66,12 @@ export const posts: BlogPost[] = [
     ],
   },
 ];
+
+// ISO dates sort correctly as strings. Keep the newest post first everywhere
+// without requiring authors to place entries in a particular file order.
+export const posts = [...postEntries].sort((a, b) =>
+  b.date.localeCompare(a.date),
+);
 
 export function getPost(slug: string) {
   return posts.find((post) => post.slug === slug);
