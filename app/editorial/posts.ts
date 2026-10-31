@@ -337,6 +337,7 @@ const postEntries: BlogPost[] = [
             ],
           },
           "His résumé reads like a Vancouver food tour: McDonald's, Kinton Ramen, Taste of Thai, Big Way Hot Pot. A man who has worked in seemingly every restaurant in the Lower Mainland, yet whose bank account remains an unsolved economic mystery.",
+          "Fun fact: Moong thinks he's Wasian.",
           "But Moong is not merely a businessman. He is an athlete.",
         ],
       },
